@@ -16,5 +16,29 @@ namespace TheWatchLibrary
             Mminute = mminute;
             Hour = hour;
         }
+
+        public bool CheckHourInputValid(int hour)
+        {
+            if (hour >= 0 && hour <= 24)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool ChecMinuteInputValid(int minute)
+        {
+            if (minute >= 0 && minute <= 60)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
