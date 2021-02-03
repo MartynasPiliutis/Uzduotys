@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TheWatchLibrary;
 
-namespace TheWatch
+namespace TheWatchLibrary
 {
-    public class Program
+    public class ProgramRun
     {
-        public static void Main()
+        public static void MasterCode()
         {
-            /*Console.WriteLine("check1");
+            Console.WriteLine("check1");
             TimeRepository timeRepository = new TimeRepository(); //Setting up time
 
             Console.WriteLine("check2");
@@ -27,7 +26,7 @@ namespace TheWatch
                 while (reply == "y")
                 {
                     Console.Clear();
-                    Program.Main();
+                    MasterCode();
                 }
             }
             else
@@ -39,7 +38,7 @@ namespace TheWatch
             Console.WriteLine();
             Console.WriteLine("Bye!!!");
             Console.Write("Press any key to exit...");
-            Environment.Exit(0);*/
+            Environment.Exit(0);
 
         }
     }

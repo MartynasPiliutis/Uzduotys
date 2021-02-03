@@ -8,37 +8,15 @@ namespace TheWatchLibrary
 {
     public class TheHands
     {
-        public int Mminute { get; private set; }
-        public int Hour { get; private set; }
+        public int Hour { get; set; }
+        public int Minute { get; set; }
 
-        public TheHands(int mminute, int hour)
+        public TheHands(int hour, int minute)
         {
-            Mminute = mminute;
             Hour = hour;
+            Minute = minute;
         }
 
-        public bool CheckHourInputValid(int hour)
-        {
-            if (hour >= 0 && hour <= 24)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
 
-        public bool ChecMinuteInputValid(int minute)
-        {
-            if (minute >= 0 && minute <= 60)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
     }
 }
