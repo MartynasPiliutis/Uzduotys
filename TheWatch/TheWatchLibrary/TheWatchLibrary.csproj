@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AngleProgram.cs" />
+    <Compile Include="ProgramFunctions.cs" />
     <Compile Include="ProgramRun.cs" />
     <Compile Include="TimeRepository.cs" />
     <Compile Include="TheHands.cs" />

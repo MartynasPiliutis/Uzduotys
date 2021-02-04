@@ -8,38 +8,22 @@ namespace TheWatchLibrary
 {
     public class ProgramRun
     {
-        public static void MasterCode()
+        public static void MasterCode()     //Program execution
         {
-            Console.WriteLine("check1");
-            TimeRepository timeRepository = new TimeRepository(); //Setting up time
-
-            Console.WriteLine("check2");
-            timeRepository.PrintTime();
-            ProgramRepeatMessage();
-        }
-        private static void ProgramRepeatMessage()
-        {
-            Console.Write("Do you want to calculate another angle? (y/n) ");
-            string reply = Convert.ToString(Console.ReadKey().KeyChar);
-            if (reply == "y" || reply == "n")
-            {
-                while (reply == "y")
-                {
-                    Console.Clear();
-                    MasterCode();
-                }
-            }
-            else
-            {
-                Console.WriteLine();
-                Console.WriteLine("Something went wrong...");
-                ProgramRepeatMessage();
-            }
+            ProgramFunctions programFunctions = new ProgramFunctions();
+            TimeRepository timeRepository = new TimeRepository();
+            AngleProgram angleProgram = new AngleProgram();
             Console.WriteLine();
-            Console.WriteLine("Bye!!!");
-            Console.Write("Press any key to exit...");
-            Environment.Exit(0);
-
+            programFunctions.PrintTime(timeRepository.YourWatchList);
+            Console.WriteLine();
+            programFunctions.ContinueMessage();
+            Console.WriteLine();
+            programFunctions.PrintAngle(angleProgram.CalculateArrowsAngle(timeRepository.YourWatchList));
+            Console.WriteLine();
+            programFunctions.PrintAngleInDegrees(angleProgram.CalculateArrowsAngle(timeRepository.YourWatchList), timeRepository.YourWatchList[0].Minute);
+            Console.WriteLine();
+            programFunctions.ProgramRepeatMessage();
         }
+
     }
 }

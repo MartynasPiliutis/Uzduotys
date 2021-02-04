@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheWatchLibrary
 {
-    public class TheHands
+    public class TheHands   //The arrows constructor
     {
         public int Hour { get; set; }
         public int Minute { get; set; }
